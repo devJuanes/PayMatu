@@ -1,0 +1,28 @@
+{
+  "name": "paymatu",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --packages=external --format=esm --outfile=lib/index.js",
+    "start": "node lib/index.js",
+    "dev": "esbuild src/index.ts --bundle --platform=node --packages=external --format=esm --outfile=lib/index.js && node lib/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.8.0",
+    "landapay": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.12.2",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.9.3"
+  }
+}
